@@ -1,24 +1,23 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import data from './NestedPags/data';
 
-const Service = () => {
+const Messages = () => {
+  // const [msgData, setMsgData] = useState(data);
+
   return (
     <div>
       <h1>Welcome To Messages Page</h1>
-      <ul className="text-primary ">
-        <Link to={"msg1"}>
-          <li className="">Message1</li>
-        </Link>
-        <Link to={"msg2"}>
-          <li className="">Message2</li>
-        </Link>
-        <Link to={"msg3"}>
-          <li className="">Message3</li>
-        </Link>
+      <ul className="text-primary">
+        {data.map((e) => (
+          <li key={e.id}>
+            <Link to={`/message/${e.id}`}>{e.Messages}</Link>
+          </li>
+        ))}
         <Outlet/>
       </ul>
     </div>
   );
 };
 
-export default Service;
+export default Messages;
