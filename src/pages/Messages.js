@@ -10,10 +10,10 @@ const Service = () => {
           <li className="">Message1</li>
         </Link>
         <Link to={"msg2"}>
-          <li className="">Message1</li>
+          <li className="">Message2</li>
         </Link>
         <Link to={"msg3"}>
-          <li className="">Message1</li>
+          <li className="">Message3</li>
         </Link>
         <Outlet/>
       </ul>
